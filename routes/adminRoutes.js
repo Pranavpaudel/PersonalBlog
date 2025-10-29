@@ -11,4 +11,10 @@ router.post('/create articles', (req, res) => {
   res.send('New article created');
 });
 
+router.delete('/articles/:id', (req, res) => {
+  const articleId = req.params.id;  
+    // Logic to delete the article with the given ID
+    res.send(`Article with ID: ${articleId} deleted`);
+});
+
 module.exports = router;
