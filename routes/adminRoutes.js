@@ -7,13 +7,19 @@ router.get('/dashboard', (req, res) => {
 });
 
 router.post('/create articles', (req, res) => {
-  // Logic to create a new article
+
   res.send('New article created');
+});
+
+router.put('/articles/:id', (req, res) => {
+  const articleId = req.params.id;
+    
+    res.send(`Article with ID: ${articleId} updated`);
 });
 
 router.delete('/articles/:id', (req, res) => {
   const articleId = req.params.id;  
-    // Logic to delete the article with the given ID
+
     res.send(`Article with ID: ${articleId} deleted`);
 });
 
